@@ -3,7 +3,7 @@ import React from 'react';
 function Wrapper(props) {
 
     const style = {
-        backgroundColor : 'yellow',
+        backgroundColor : 'skyblue',
         height : "300px"
     }
 
