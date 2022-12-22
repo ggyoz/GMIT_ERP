@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -21,13 +20,6 @@ public class TestJpaRestController {
 
     @Autowired
     MemberService memberService;
-
-    // 모든 회원 조회
-    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<List<MemberVo>> getAllMembers(){
-        List<MemberVo> member = memberService.findAll();
-        return new ResponseEntity<List<MemberVo>>(member, HttpStatus.OK);
-    }
 
     // 회원번호로 한명의 회원 조회
     @GetMapping(value = "/{no}", produces = { MediaType.APPLICATION_JSON_VALUE })

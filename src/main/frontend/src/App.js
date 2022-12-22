@@ -4,11 +4,8 @@ import Footer from "./component/Footer";
 import Main from "./component/Main";
 import Wrapper from "./component/wrapper";
 import Example01 from "./example/Example01";
-import Example02 from "./example/Example02";
-
+import Example04 from "./example/Example04";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-
 import axios from 'axios';
 
 function App(){
@@ -26,7 +23,7 @@ function App(){
               <Main name="허진욱" color="blue"/>
           </Wrapper>
           백엔드에서 가져온 데이터입니다. : {hello}
-          <Example02/>
+          <Example04/>
       </div>
   );
 }

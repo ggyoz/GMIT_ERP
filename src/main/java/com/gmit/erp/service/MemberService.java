@@ -30,6 +30,11 @@ public class MemberService {
         return member;
     }
 
+    public Optional<MemberVo> findByEmail(String email){
+        Optional<MemberVo> member = memberRepository.findByEmail(email);
+        return member;
+    }
+
     public void deleteById(Long no) {
         memberRepository.deleteById(no);
     }
