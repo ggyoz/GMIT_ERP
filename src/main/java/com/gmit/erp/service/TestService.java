@@ -22,6 +22,7 @@ public class TestService {
         logger.info("Info level 테스트");
         logger.warn("Warn level 테스트");
         logger.error("Error level 테스트");
+
         return mapper.selectTest();
     }
 }

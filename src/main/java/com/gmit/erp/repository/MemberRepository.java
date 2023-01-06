@@ -1,21 +1,15 @@
 package com.gmit.erp.repository;
 
-import com.gmit.erp.vo.MemberVo;
+import com.gmit.erp.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface MemberRepository extends JpaRepository<MemberVo, Long> {
+public interface MemberRepository extends JpaRepository<Member, Long> {
 
-    public Optional<MemberVo> findById(String id);
+    Optional<Member> findByEmail(String email);
 
-    public Optional<MemberVo> findByName(String name);
-
-    public Optional<MemberVo> findByEmail(String email);
-
-    public List<MemberVo> findByNameLike(String keyword);
-
+    boolean existsByEmail(String email);
 }

@@ -2,3 +2,19 @@
     display: block;
     margin : 5px;
 }
+
+.login_form section span{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+
+.login_form .LoginBtn{
+    margin-left: 10px;
+}
+
+.login_form .SignInBtn{
+    margin-left: 10px;
+}

@@ -1,6 +1,8 @@
 package com.gmit.erp.vo;
 
+import com.gmit.erp.entity.Authority;
 import lombok.*;
+
 import javax.persistence.*;
 
 @Data
@@ -11,7 +13,6 @@ public class MemberVo {
     @Id // pk 지정
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment 설정 컬럼 //GenerationType.IDENTITY는 기본 키 생성을 데이터베이스에 위임하는 방식이다.
     private Long no;
-
     private String id;
 
     private String name;
@@ -20,11 +21,15 @@ public class MemberVo {
 
     private String password;
 
+    @Enumerated(EnumType.STRING)
+    private Authority authority;
+
     @Builder
-    public MemberVo(String id, String name, String email, String password) {
+    public MemberVo(String id, String name, String email, String password, Authority authority) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
+        this.authority = authority;
     }
 }

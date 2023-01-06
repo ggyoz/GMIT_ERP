@@ -1,17 +1,11 @@
 package com.gmit.erp.controller;
 
 import com.gmit.erp.service.MemberService;
-import com.gmit.erp.vo.MemberVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
-import java.util.Optional;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("memberTest")
@@ -22,7 +16,7 @@ public class TestJpaRestController {
     MemberService memberService;
 
     // 회원번호로 한명의 회원 조회
-    @GetMapping(value = "/{no}", produces = { MediaType.APPLICATION_JSON_VALUE })
+    /*@GetMapping(value = "/{no}", produces = { MediaType.APPLICATION_JSON_VALUE })
     public ResponseEntity<MemberVo> getMember(@PathVariable("no") Long no){
         Optional<MemberVo> member = memberService.findById(no);
         return new ResponseEntity<MemberVo>(member.get(), HttpStatus.OK);
@@ -53,5 +47,5 @@ public class TestJpaRestController {
     public ResponseEntity<MemberVo> save(HttpServletRequest req, MemberVo member){
         return new ResponseEntity<MemberVo>(memberService.save(member), HttpStatus.OK);
     }
-
+*/
 }
